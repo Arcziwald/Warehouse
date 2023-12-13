@@ -1,11 +1,10 @@
-﻿using System;
-
+﻿
 namespace Warehouse {
     class Program
     {
 
         // stała
-        const string FILE_NAME = "C:\\WarehouseFiles\\ImportFile.xlsx";
+        public const string FILE_NAME = "C:\\WarehouseFiles\\ImportFile.xlsx";
 
         static void Main(string[] args)
         {
@@ -30,6 +29,8 @@ namespace Warehouse {
             choice = Console.ReadLine();
 
             Int32.TryParse(choice, out chosenOption);
+
+
         }
     }
 
