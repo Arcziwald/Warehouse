@@ -60,7 +60,7 @@ namespace Warehouse
         public void RemoveItem(int removeId)
         {
             Item productToRemove = new Item();
-            foreach(var item in Items)
+            foreach (var item in Items)
             {
                 if (item.Id == removeId)
                 {

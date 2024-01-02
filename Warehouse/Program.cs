@@ -1,7 +1,8 @@
 ﻿
 using System.ComponentModel;
 
-namespace Warehouse {
+namespace Warehouse
+{
     class Program
     {
 
@@ -24,11 +25,14 @@ namespace Warehouse {
             ////c2 Wyświetlę wszystkie informacje związane z tym produktem
             ////d1 Zostanę poproszony o wprowadzenie nazwy albo id kategorii
             ////d2 Wyświetlę listę produktów
+            ///
 
-           MenuActionService actionService = new MenuActionService();
-           actionService = Initialize(actionService);
 
-           Console.WriteLine("Welcome to warehouse app!!!");
+
+            MenuActionService actionService = new MenuActionService();
+            actionService = Initialize(actionService);
+
+            Console.WriteLine("Welcome to warehouse app!!!");
             while (true)
             {
                 Console.WriteLine("Please let me know what you want to do:");
@@ -62,12 +66,15 @@ namespace Warehouse {
                 }
 
             }
-           // Console.WriteLine("1. Add Item");
-           // Console.WriteLine("2. Remove Item");
-           // Console.WriteLine("3. Check Item");
-           // Console.WriteLine("Press 1, 2 or 3...");
 
-           // string operation = Console.ReadLine();
+
+
+            // Console.WriteLine("1. Add Item");
+            // Console.WriteLine("2. Remove Item");
+            // Console.WriteLine("3. Check Item");
+            // Console.WriteLine("Press 1, 2 or 3...");
+
+            // string operation = Console.ReadLine();
 
             // Console.WriteLine($"You have chosen option number: {operation}");
 
@@ -88,18 +95,18 @@ namespace Warehouse {
             //Enum.TryParse(category, out chosenCategory);
         }
         private static MenuActionService Initialize(MenuActionService actionService)
-            {
-                actionService.AddNewAction(1, "Add item", "Main");
-                actionService.AddNewAction(2, "Remove item", "Main");
-                actionService.AddNewAction(3, "Show details", "Main");
-                actionService.AddNewAction(4, "List of item", "Main");
+        {
+            actionService.AddNewAction(1, "Add item", "Main");
+            actionService.AddNewAction(2, "Remove item", "Main");
+            actionService.AddNewAction(3, "Show details", "Main");
+            actionService.AddNewAction(4, "List of item", "Main");
 
-                actionService.AddNewAction(1, "Clothing", "AddNewItemMenu");
-                actionService.AddNewAction(2, "Electronics", "AddNewItemMenu");
-                actionService.AddNewAction(3, "Grocery", "AddNewItemMenu");
-                return actionService;
-            }
+            actionService.AddNewAction(1, "Clothing", "AddNewItemMenu");
+            actionService.AddNewAction(2, "Electronics", "AddNewItemMenu");
+            actionService.AddNewAction(3, "Grocery", "AddNewItemMenu");
+            return actionService;
+        }
     }
-    
+
 
 }
