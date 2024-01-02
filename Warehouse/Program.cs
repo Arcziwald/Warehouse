@@ -1,9 +1,13 @@
 ﻿
-using System.ComponentModel;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.Design;
+using System.Linq;
+
 
 namespace Warehouse
 {
-    class Program
+    public class Program
     {
 
         // stała
@@ -30,6 +34,7 @@ namespace Warehouse
 
 
             MenuActionService actionService = new MenuActionService();
+            ItemService itemService = new ItemService();
             actionService = Initialize(actionService);
 
             Console.WriteLine("Welcome to warehouse app!!!");
