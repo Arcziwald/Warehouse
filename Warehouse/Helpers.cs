@@ -1,11 +1,10 @@
 ﻿using System;
 namespace Warehouse
 {
-	public class Helpers
+	public enum ItemType
 	{
-		public int GiveMeNumber()
-		{
-			int number = 5;
-		}
+		Grocery = 1,
+		Clothing
+		Electronics
 	}
 }
