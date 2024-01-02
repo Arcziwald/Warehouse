@@ -48,7 +48,7 @@ namespace Warehouse
                 }
 
                 var operation = Console.ReadKey();
-                ItemService itemService = new ItemService();
+               
                 switch (operation.KeyChar)
                 {
                     case '1':
@@ -71,33 +71,6 @@ namespace Warehouse
                 }
 
             }
-
-
-
-            // Console.WriteLine("1. Add Item");
-            // Console.WriteLine("2. Remove Item");
-            // Console.WriteLine("3. Check Item");
-            // Console.WriteLine("Press 1, 2 or 3...");
-
-            // string operation = Console.ReadLine();
-
-            // Console.WriteLine($"You have chosen option number: {operation}");
-
-            // Zmienna
-            // int chosenOperation = 0;
-
-            //  Int32.TryParse(operation, out chosenOperation);
-
-            //  Console.WriteLine("Select item category");
-            //   Console.WriteLine("1. Grocery");
-            //  Console.WriteLine("2. Clothing");
-            //  Console.WriteLine("3. Electronics");
-
-            //  string category = Console.ReadLine();
-
-            //   ItemType chosenCategory;
-
-            //Enum.TryParse(category, out chosenCategory);
         }
         private static MenuActionService Initialize(MenuActionService actionService)
         {
