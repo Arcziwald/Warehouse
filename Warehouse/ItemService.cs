@@ -17,11 +17,11 @@ namespace Warehouse
         public ConsoleKeyInfo AddNewItemView(MenuActionService actionService)
         {
 
-            var AddNewItemMenu = actionService.GetMenuActionsByMenuName("AddNewItemMenu");
+            var addNewItemMenu = actionService.GetMenuActionsByMenuName("addNewItemMenu");
             Console.WriteLine("Please select item type: ");
-            for (int i = 0; i < AddNewItemMenu.Count; i++)
+            for (int i = 0; i < addNewItemMenu.Count; i++)
             {
-                Console.WriteLine($"{AddNewItemMenu[i].Id}. {AddNewItemMenu[i].Name}");
+                Console.WriteLine($"{addNewItemMenu[i].Id}. {addNewItemMenu[i].Name}");
             }
 
             var operation = Console.ReadKey();
@@ -61,13 +61,6 @@ namespace Warehouse
         {
             Item productToRemove = new Item();
             foreach (var item in Items)
-            {
-                if (item.Id == removeId)
-                {
-                    productToRemove = item;
-                    break;
-                }
-            }
             Items.Remove(productToRemove);
         }
 
