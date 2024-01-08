@@ -10,18 +10,11 @@ namespace Warehouse
         public string Name { get; set; }
         public string MenuName { get; set; }
 
-        public MenuAction(int id)
-        {
-            Id = id;
-            Name = "";
-            MenuName = "";
-        }
-
         public MenuAction(int id, string name)
         {
             Id = id;
             Name = name;
             MenuName = "";
-        }
+        }               
     }
 }
