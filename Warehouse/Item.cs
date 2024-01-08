@@ -50,6 +50,7 @@ namespace Warehouse
             Console.WriteLine($"Item id is: {Id}");
         }
     }
+             // metoda dziedziczenia dla GroceryItem z Item - tylko jedną klasę ale możliwe jest dzidziczenie kaskadowe
     public class GroceryItem : Item
     {
         public DateTime ExpieryDate { get; set; }
