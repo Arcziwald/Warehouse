@@ -11,6 +11,11 @@ namespace Warehouse
         public const string FILE_NAME = @"C:\WarehouseFiles\ImportFile.xlsx";
         static void Main(string[] args)
         {
+
+            //Podzielić solucję na projekty
+            //Dodać interfejsy dla serwisów
+            //Dodać bazowy serwis i bazowy model
+
             var genericItemService = new GenericService<Item>();
 
             Item itemForGeneric = new Item(1, "Apple");
