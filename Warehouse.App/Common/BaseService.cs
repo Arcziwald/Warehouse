@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Warehouse.App.Abstract;
+using Warehouse.Domain.Common;
 
 namespace Warehouse.App.Common
 {
@@ -23,12 +25,22 @@ namespace Warehouse.App.Common
 
         public List<T> GetAllItems()
         {
-            throw new NotImplementedException();
+            return Items;
         }
 
         public void RemoveItem(T item)
         {
-            throw new NotImplementedException();
+            Items.Remove(item);
+        }
+
+        public int UpdateItem(T item)
+        {
+            var entity = Items.FirstOrDefault(p => p.Id == item.Id);
+            if (entity != null)
+            {
+                entity = item;
+            }
+            return entity.Id;
         }
     }
 }
